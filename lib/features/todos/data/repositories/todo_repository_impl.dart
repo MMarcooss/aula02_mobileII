@@ -1,5 +1,6 @@
-import '../../../../core/services/todo_repository.dart';
-import '../../../../data/utils/todo_remote_datasource.dart';
+import '../../domain/entities/todo.dart';
+import '../../domain/repositories/todo_repository.dart';
+import '../datasources/todo_remote_datasource.dart';
 import '../datasources/todo_local_datasource.dart';
 
 class TodoRepositoryImpl implements TodoRepository {
