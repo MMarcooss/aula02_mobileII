@@ -1,4 +1,4 @@
-import 'package:core/features/todos/models/todo.dart';
+import '../entities/todo.dart';
 
 abstract class TodoRepository {
   Future<TodoFetchResult> fetchTodos({bool forceRefresh = false});
