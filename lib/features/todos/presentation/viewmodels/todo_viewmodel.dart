@@ -1,8 +1,6 @@
+import 'package:flutter/foundation.dart';
+import '../../../todos/data/repositories/todo_repository_impl.dart';
 import '../../data/repositories/todo_repository_impl.dart';
-import '../../../../core/services/todo_repository.dart';
-import '../../data/datasources/todo_local_datasource.dart';
-import '../../data/datasources/todo_remote_datasource.dart';
-import '../../data/models/todo_model.dart';
 import '../../domain/entities/todo.dart';
 
 class TodoViewModel extends ChangeNotifier {
