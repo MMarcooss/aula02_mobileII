@@ -1,11 +1,14 @@
-import 'package:flutter/foundation.dart';
-
 import '../../data/repositories/todo_repository_impl.dart';
-import '../../data/repositories/models/todo.dart';
+import '../../../../core/services/todo_repository.dart';
+import '../../data/datasources/todo_local_datasource.dart';
+import '../../data/datasources/todo_remote_datasource.dart';
+import '../../data/models/todo_model.dart';
+import '../../domain/entities/todo.dart';
 
 class TodoViewModel extends ChangeNotifier {
-  final TodoRepositoryImpl _repo =
-      TodoRepositoryImpl(); // bagunça: impl direto aqui
+  final TodoRepository _repo;
+  TodoViewModel({TodoRepository? repo})
+    : _repo = repo ?? TodoRepositoryImpl(); // bagunça: impl direto aqui
 
   bool isLoading = false;
   String? errorMessage;
