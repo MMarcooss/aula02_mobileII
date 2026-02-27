@@ -1,4 +1,4 @@
-import '../models/todo.dart';
+import '../domain/entities/todo.dart';
 
 abstract class TodoRepository {
   Future<TodoFetchResult> fetchTodos({bool forceRefresh = false});
