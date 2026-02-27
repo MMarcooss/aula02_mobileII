@@ -1,4 +1,4 @@
-import '../models/todo.dart';
+import '../../domain/entities/todo.dart';
 
 class TodoModel extends Todo {
   const TodoModel({
@@ -16,8 +16,8 @@ class TodoModel extends Todo {
   }
 
   Map<String, dynamic> toJson() => {
-        'id': id,
-        'title': title,
-        'completed': completed,
-      };
+    'id': id,
+    'title': title,
+    'completed': completed,
+  };
 }
