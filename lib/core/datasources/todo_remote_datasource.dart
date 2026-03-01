@@ -1,12 +1,12 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-import '../models/todo_model.dart';
+import '../../features/todos/data/models/todo_model.dart';
 
 class TodoRemoteDataSource {
   final http.Client _client;
   TodoRemoteDataSource([http.Client? client])
-      : _client = client ?? http.Client();
+    : _client = client ?? http.Client();
 
   Future<List<TodoModel>> fetchTodos() async {
     final uri = Uri.parse(
