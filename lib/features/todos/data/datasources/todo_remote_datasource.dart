@@ -6,7 +6,7 @@ import '../models/todo_model.dart';
 class TodoRemoteDataSource {
   final http.Client _client;
   TodoRemoteDataSource([http.Client? client])
-    : _client = client ?? http.Client();
+      : _client = client ?? http.Client();
 
   Future<List<TodoModel>> fetchTodos() async {
     final uri = Uri.parse(
